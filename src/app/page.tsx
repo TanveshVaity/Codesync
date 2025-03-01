@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import {
   SignInButton,
   SignUpButton,
@@ -8,7 +9,9 @@ import {
 export default function Home() {
   return (
     <div>
-      home page
+      <SignInButton>
+        <Button >Sign in</Button>
+      </SignInButton>
     </div>
   );
 }
