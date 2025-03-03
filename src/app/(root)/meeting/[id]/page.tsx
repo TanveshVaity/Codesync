@@ -1,12 +1,12 @@
 "use client";
 
 import { Loader } from "@/components/Loader";
-import { MeetingSetup } from "@/components/MeetingSetup";
 import useGetCallById from "@/hooks/useGetCallById";
 import { useUser } from "@clerk/nextjs";
 import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import MeetingSetup from "@/components/MeetingSetup";
 
 export default function MeetingPage() {
     const { id } = useParams();
@@ -26,14 +26,14 @@ export default function MeetingPage() {
     }
 
     return (
-        <StreamCall >
-        <StreamTheme>
-            {!isSetupComplete ? (
-            <MeetingSetup/>
-            ) : (
-                <></>
-            )}
-        </StreamTheme>
+        <StreamCall call={call}>
+            <StreamTheme>
+                {!isSetupComplete ? (
+                <MeetingSetup onSetupComplete={() => setIsSetupComplete(true)} />
+                ) : (
+                    <></>
+                )}
+            </StreamTheme>
         </StreamCall>
     );
 }
