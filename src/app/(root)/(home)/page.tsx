@@ -1,6 +1,6 @@
 "use client"
 import ActionCard from "@/components/ActionCard";
-import MeetingModal from "@/components/MeetingModel";
+import MeetingModal from "@/components/MeetingModal";
 import { QUICK_ACTIONS } from "@/constants";
 import { useUserRole } from "@/hooks/getUserRole";
 import { useQuery } from "convex/react";
