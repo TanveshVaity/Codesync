@@ -33,14 +33,14 @@ export default function MeetingSetup({ onSetupComplete }: { onSetupComplete: () 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Card className="md:col-span-1 p-6 flex flex-col">
                     <div>
-                    <h1 className="text-xl font-semibold mb-1">Camera Preview</h1>
-                    <p className="text-sm text-muted-foreground">Make sure you look good!</p>
+                        <h1 className="text-xl font-semibold mb-1">Camera Preview</h1>
+                        <p className="text-sm text-muted-foreground">Make sure you look good!</p>
                     </div>
 
                     <div className="mt-4 flex-1 min-h-[400px] rounded-xl overflow-hidden bg-muted/50 border relative">
-                    <div className="absolute inset-0">
-                        <VideoPreview className="h-full w-full" />
-                    </div>
+                        <div className="absolute inset-0">
+                            <VideoPreview className="h-full w-full" />
+                        </div>
                     </div>
                 </Card>
 

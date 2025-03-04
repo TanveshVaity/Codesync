@@ -3,10 +3,11 @@
 import { Loader } from "@/components/Loader";
 import useGetCallById from "@/hooks/useGetCallById";
 import { useUser } from "@clerk/nextjs";
-import { StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
+import { SpeakerLayout, StreamCall, StreamTheme } from "@stream-io/video-react-sdk";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 import MeetingSetup from "@/components/MeetingSetup";
+import  MeetingRoom  from "@/components/MeetingRoom";
 
 export default function MeetingPage() {
     const { id } = useParams();
@@ -31,7 +32,7 @@ export default function MeetingPage() {
                 {!isSetupComplete ? (
                 <MeetingSetup onSetupComplete={() => setIsSetupComplete(true)} />
                 ) : (
-                    <></>
+                    <MeetingRoom />
                 )}
             </StreamTheme>
         </StreamCall>
